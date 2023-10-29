@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="navbar navbar-expand-lg bg-body-tertiary border">
+        <div class="container-fluid d-flex justify-content-center">
+          <p class="text-center fs-2">ROLL THE DICE</p>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="container d-flex justify-content-center ">
+            <div class="row">
+                <div class="col">
+                    <h1 class="m-5">PRESS x TO THROW THE DICE</h1>
+                    <h1 id="Winner"></h1>
+                    <div class="row p-5">
+                        <!-- DICE2 -->
+                        <div class="col d-flex justify-content-center ">
+                            <button id="dice" onclick="start()" >
+                                <div id="dice11" class="row d-flex justify-content-center">
+                                    
+                                </div>
+                                <div id = "dice12" class="row d-flex justify-content-center">
+                                    
+                                </div> 
+                            </button>
+                        </div>
+                        <!-- DICE1 -->
+                        <div class="col d-flex justify-content-center ">
+                            <button id="dice" onclick="start()" class="dice2">
+                                <div id="dice21" class="row d-flex justify-content-center">
+                                    
+                                </div>
+                                <div  id="dice22" class="row d-flex justify-content-center">
+                                    
+                                    <!-- <div id="circles"></div>
+                                    <div id="circles"></div> -->
+                                </div> 
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <footer>
+      <!-- place footer here -->
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="script.js">
+
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
