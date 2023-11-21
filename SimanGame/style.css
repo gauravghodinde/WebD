@@ -1,0 +1,44 @@
+
+
+#redBtn{
+    background-color: red;
+    border-radius:5px;
+    border-color: black;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+
+}
+#greenBtn{
+    background-color: green;
+    border-radius:5px;
+    border-color: black;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+#blueBtn{
+    background-color: blue;
+    border-radius:5px;
+    border-color: black;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+#yellowBtn{
+    background-color: yellow;
+    border-radius:5px;
+    border-color: black;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+}
+button:hover{
+    transform: translateY(2px);
+}
+button:active{
+    transform: translateY(-2px) scale(1.05);  
+}
+.show{
+    transform: translateY(-2px) scale(1.08);  
+}

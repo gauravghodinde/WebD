@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input Form</title>
+    <style>
+        /* Some basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add User</h1>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required><br>
+
+            <label for="catchphrase">Catchphrase:</label>
+            <input type="text" id="catchphrase" required><br>
+
+            <label for="imageLink">Image Link:</label>
+            <input type="text" id="imageLink" required><br>
+
+            <button type="button" onclick="addUser()">Add User</button>
+        </form>
+    </div>
+
+    <script>
+        // Initialize an empty array to store users
+        var users = [];
+
+        // Function to add a user to the array
+        function addUser() {
+            var name = document.getElementById("name").value;
+            var catchphrase = document.getElementById("catchphrase").value;
+            var imageLink = document.getElementById("imageLink").value;
+
+            console.log(name,catchphrase,imageLink);
+            // Create a user object
+            var user = {
+                name: name,
+                catchphrase: catchphrase,
+                imageLink: imageLink
+            };
+            // Add the user object to the array
+            users.push(user);
+            fetch('http://localhost:3000/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(user)
+            })
+                .then(response => response.json())
+                .then(data => {
+
+                    console.log('Data sent to the server:', data);
+                })
+                .catch(error => {
+                    console.error('Error sending data to the server:', error);
+                });
+
+            // Clear the input fields
+            document.getElementById("name").value = "";
+            document.getElementById("catchphrase").value = "";
+            document.getElementById("imageLink").value = "";
+
+            // Display the updated array of users (for demonstration purposes)
+            console.log(users);
+        }
+    </script>
+</body>
+
+</html>
